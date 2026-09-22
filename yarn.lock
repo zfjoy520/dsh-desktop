@@ -71,6 +71,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@agents-anywhere/dsh-bridge-next@file:../vendor/agents-anywhere/agents-anywhere-dsh-bridge-next-0.1.0-dev.0.desktop.ca022d9286dd0.rc4b2a1d2.tgz::locator=dsh-plugin-desktop-fork%40workspace%3Adsh-plugin-desktop-fork":
+  version: 0.1.0-dev.0.desktop.ca022d9286dd0.rc4b2a1d2
+  resolution: "@agents-anywhere/dsh-bridge-next@file:../vendor/agents-anywhere/agents-anywhere-dsh-bridge-next-0.1.0-dev.0.desktop.ca022d9286dd0.rc4b2a1d2.tgz#../vendor/agents-anywhere/agents-anywhere-dsh-bridge-next-0.1.0-dev.0.desktop.ca022d9286dd0.rc4b2a1d2.tgz::hash=f41e7e&locator=dsh-plugin-desktop-fork%40workspace%3Adsh-plugin-desktop-fork"
+  dependencies:
+    "@dataiku/uv": "npm:0.12.0"
+    clsx: "npm:2.1.1"
+    lucide-react: "npm:1.41.0"
+    qrcode: "npm:1.5.4"
+  peerDependencies:
+    "@deepseek-ai/cordis": 4.0.2
+    "@deepseek-ai/dsh-llm": 0.1.5-rc.2 || 0.1.6-alpha.2
+    "@deepseek-ai/dsh-session": 0.1.5-rc.2 || 0.1.6-alpha.2
+    "@deepseek-ai/dsh-typert-protocol": 0.1.5-rc.2 || 0.1.6-alpha.2
+    "@deepseek-ai/schemastery": ^3.18.1
+    react: ^18.3.1
+  checksum: 10c0/fc32ba9a365e9c7d85f0069b35e4c0e3a6c14acd416805d53c0bfd42c831c2d4dd4980228d3df121b901e1e21840e9e6187d23375628bdb6e6c1bb372f38c3a4
+  languageName: node
+  linkType: hard
+
 "@anthropic-ai/sdk@npm:0.123.0":
   version: 0.123.0
   resolution: "@anthropic-ai/sdk@npm:0.123.0"
@@ -4785,6 +4804,50 @@ __metadata:
     "@deepseek-ai/dsh-settings": ^0.1.6-alpha.2
     "@deepseek-ai/dsh-timeout": ^0.1.6-alpha.2
   checksum: 10c0/7d478e5a778c2679d403df9714237686c601502f9712cc3b64c002319c5e72292648cccb4447196c93f934d38c46f11fb9048941d071633dc2d0ff151a935e12
+  languageName: node
+  linkType: hard
+
+"@deepseek-ai/dsh-llm-pi-ai@patch:@deepseek-ai/dsh-llm-pi-ai@file%3Avendor/dsh-runtime/0.1.5-rc.2/deepseek-ai-dsh-llm-pi-ai-0.1.5-rc.2.tgz#./patches/dsh-llm-pi-ai@0.1.5-rc.2.patch::locator=deepseek-harness-desktop%40workspace%3A.":
+  version: 0.1.5-rc.2
+  resolution: "@deepseek-ai/dsh-llm-pi-ai@patch:@deepseek-ai/dsh-llm-pi-ai@file%3Avendor/dsh-runtime/0.1.5-rc.2/deepseek-ai-dsh-llm-pi-ai-0.1.5-rc.2.tgz%23vendor/dsh-runtime/0.1.5-rc.2/deepseek-ai-dsh-llm-pi-ai-0.1.5-rc.2.tgz%3A%3Ahash=4b68dd&locator=deepseek-harness-desktop%2540workspace%253A.#./patches/dsh-llm-pi-ai@0.1.5-rc.2.patch::version=0.1.5-rc.2&hash=aeed42&locator=deepseek-harness-desktop%40workspace%3A."
+  dependencies:
+    "@deepseek-ai/dsh-brand": "npm:^0.1.5-rc.2"
+    "@deepseek-ai/dsh-util-values": "npm:^0.1.5-rc.2"
+    "@deepseek-ai/schemastery": "npm:^3.18.2"
+    "@earendil-works/pi-ai": "npm:^0.85.1"
+  peerDependencies:
+    "@deepseek-ai/cordis": ^4.0.2
+    "@deepseek-ai/dsh-attachment": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-authorization": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-credentials": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-fs": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-launch-environment": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-llm": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-settings": ^0.1.5-rc.2
+    "@deepseek-ai/dsh-timeout": ^0.1.5-rc.2
+  checksum: 10c0/5e2f272ed28d87f97fde68302f128157494a83cb35c9dc12cee6b52c136d0bea739f5f2dd48188ae2495a59db06dd05100ef8cd458f15c4c00acef684e667d5b
+  languageName: node
+  linkType: hard
+
+"@deepseek-ai/dsh-llm-pi-ai@patch:@deepseek-ai/dsh-llm-pi-ai@file%3Avendor/dsh-runtime/0.1.6-alpha.2/deepseek-ai-dsh-llm-pi-ai-0.1.6-alpha.2.tgz#./patches/dsh-llm-pi-ai@0.1.6-alpha.2.patch::locator=deepseek-harness-desktop%40workspace%3A.":
+  version: 0.1.6-alpha.2
+  resolution: "@deepseek-ai/dsh-llm-pi-ai@patch:@deepseek-ai/dsh-llm-pi-ai@file%3Avendor/dsh-runtime/0.1.6-alpha.2/deepseek-ai-dsh-llm-pi-ai-0.1.6-alpha.2.tgz%23vendor/dsh-runtime/0.1.6-alpha.2/deepseek-ai-dsh-llm-pi-ai-0.1.6-alpha.2.tgz%3A%3Ahash=8e72cb&locator=deepseek-harness-desktop%2540workspace%253A.#./patches/dsh-llm-pi-ai@0.1.6-alpha.2.patch::version=0.1.6-alpha.2&hash=b00a78&locator=deepseek-harness-desktop%40workspace%3A."
+  dependencies:
+    "@deepseek-ai/dsh-brand": "npm:^0.1.6-alpha.2"
+    "@deepseek-ai/dsh-util-values": "npm:^0.1.6-alpha.2"
+    "@deepseek-ai/schemastery": "npm:^3.18.2"
+    "@earendil-works/pi-ai": "npm:^0.85.1"
+  peerDependencies:
+    "@deepseek-ai/cordis": ^4.0.2
+    "@deepseek-ai/dsh-attachment": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-authorization": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-credentials": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-fs": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-launch-environment": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-llm": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-settings": ^0.1.6-alpha.2
+    "@deepseek-ai/dsh-timeout": ^0.1.6-alpha.2
+  checksum: 10c0/730ed60b22043aa97cd21c8066c69912b213cbd00bb4ec1e58758cd97ad9bca454e12c297a65edeaf087b956bcaea58bc4f6e6822d8b7388b4e5dbf88de320e7
   languageName: node
   linkType: hard
 
@@ -14179,6 +14242,203 @@ __metadata:
   bin:
     dsh-desktop-beta: lib/bin.js
     dsh-plugin-desktop-beta: lib/bin.js
+  languageName: unknown
+  linkType: soft
+
+"dsh-plugin-desktop-fork@workspace:dsh-plugin-desktop-fork":
+  version: 0.0.0-use.local
+  resolution: "dsh-plugin-desktop-fork@workspace:dsh-plugin-desktop-fork"
+  dependencies:
+    "@agents-anywhere/dsh-bridge-next": "file:../vendor/agents-anywhere/agents-anywhere-dsh-bridge-next-0.1.0-dev.0.desktop.ca022d9286dd0.rc4b2a1d2.tgz"
+    "@base-ui/react": "npm:^1.7.0"
+    "@deepseek-ai/cordis": "npm:4.0.2"
+    "@deepseek-ai/cordis-plugin-group": "npm:1.0.2"
+    "@deepseek-ai/cordis-plugin-include": "npm:1.0.7"
+    "@deepseek-ai/cordis-plugin-loader": "npm:1.0.3"
+    "@deepseek-ai/cordis-plugin-timer": "npm:1.1.4"
+    "@deepseek-ai/dsh": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-agent": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-agent-default-model": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-agent-instructions": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-agent-loop": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-agent-presets": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-anonymous-user-id": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-api-gateway": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-api-remotes": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-api-session-controller": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-api-settings-controller": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-api-workspace-controller": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-app-boot": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-atomic-write": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-attachment": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-authorization": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-base": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-bash-local": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-brand": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-connection": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-file-upload": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-locale": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-modules": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-store": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-approval": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-attachment": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-chat": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-commands": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-conversation": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-directory-picker-browse": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-directory-picker-native": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-input-trigger": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-layout": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-primitives": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-renderer": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-session": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-settings": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-sidebar": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-slots": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-theme": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-tool": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-trajectory": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-client-ui-workspace": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-cmdline": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-code-runtime": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-command-feedback": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-commands": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-compaction": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-cordis-client-runner": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-cordis-host-runner": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-credentials": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-deepseek-llm-api-extensions": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-file-reference": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-fs": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-fs-local": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-goal": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-goal-round-driver": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-home-paths": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-hook-protocol": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-host-directory-picker": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-host-directory-picker-browse": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-host-directory-picker-native": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-host-plugin-inventory": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-host-webserver": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-http-proxy": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-invariants": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-jobs": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-jobs-local": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-launch-environment": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-llm": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-llm-deepseek": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-llm-retry": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-mcp-client": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-message-feedback": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-native-command": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-output-retention": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-permission-presets": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-plan-mode": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-pwsh-local": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-pwsh-sandbox": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-sandbox": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-sandbox-local": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-sandbox-policy": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-sandbox-windows-acl": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-scope": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-sdk-protocol": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-persistence": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-persistence-jsonl": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-projection": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-query": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-reference": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-stats": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-telemetry": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-title": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-session-title-llm": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-settings": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-settings-file": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-shell": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-shell-env": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-skill": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-skill-filesystem": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-spill": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-storage": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-storage-domain": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-subagent": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-subagent-in-process-driver": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-subprocess": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-subprocess-local": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-system-prompt": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-terminal": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-terminal-bash": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-timeout": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-token-meter": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-bash": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-goal": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-jobs": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-pwsh-persistent": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-skill": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-todo": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tool-workflow": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-tools": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-typert-protocol": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-typert-registry": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-user-approval": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-user-questions": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-util-crypto": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-util-time": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-util-values": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-util-workspace-path": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-web": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-web-app": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-webhook": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-workflow": "npm:0.1.5-rc.2"
+    "@deepseek-ai/dsh-workspace": "npm:0.1.5-rc.2"
+    "@deepseek-ai/schemastery": "npm:^3.18.2"
+    "@electron/asar": "npm:3.4.1"
+    "@electron/fuses": "npm:1.8.0"
+    "@fontsource-variable/inter": "npm:^5.3.0"
+    "@tailwindcss/vite": "npm:^4"
+    "@types/js-yaml": "npm:^4.0.9"
+    "@types/mdast": "npm:^4.0.4"
+    "@types/node": "npm:^22.20.0"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    "@types/semver": "npm:^7.7.1"
+    "@vitejs/plugin-react": "npm:^6"
+    adm-zip: "npm:^0.6.0"
+    builder-util: "npm:26.15.3"
+    class-variance-authority: "npm:^0.7.1"
+    clsx: "npm:^2.1.1"
+    dsh-community-market: "npm:0.1.0-dev.0"
+    dshmarket: "npm:1.38.1"
+    electron: "npm:43.3.0"
+    electron-builder: "npm:26.15.7"
+    fs-ext: "npm:2.1.1"
+    jsdom: "npm:29.1.1"
+    koffi: "npm:3.1.5"
+    lexical: "npm:0.49.0"
+    lucide-react: "npm:^1.33.0"
+    node-addon-require-builtin: "npm:^0.1.4"
+    node-gyp: "npm:13.0.1"
+    pnpm: "npm:11.8.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    selfsigned: "npm:5.5.0"
+    semver: "npm:^7.8.5"
+    shadcn: "npm:^4.18.0"
+    sharp: "npm:0.35.3"
+    sonner: "npm:^2.0.8"
+    tailwind-merge: "npm:^3.6.0"
+    tailwindcss: "npm:^4"
+    tsdown: "npm:0.22.2"
+    tw-animate-css: "npm:^1.4.0"
+    typescript: "npm:6.0.3"
+    vite: "npm:8.2.1"
+    vitest: "npm:4.1.8"
+    yaml: "npm:^2.9.0"
+  peerDependencies:
+    electron: 43.3.0
+  bin:
+    dsh-desktop-fork: lib/bin.js
+    dsh-plugin-desktop-fork: lib/bin.js
   languageName: unknown
   linkType: soft
 

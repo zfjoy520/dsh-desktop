@@ -11,9 +11,17 @@ node_modules/
 
 dsh-plugin-desktop/dist/
 dsh-plugin-desktop/lib/
+dsh-plugin-desktop-fork/dist/
+dsh-plugin-desktop-fork/lib/
 dsh-community-market/lib/
 
 .env.yarn
 dsh-desktop-next/lib/
 dsh-desktop-next/dist/
 dsh-desktop-next/.desktop-next/
+
+# local AI working files (never commit)
+.agent-teams/
+coord-t3-followup-drafts.md
+t1-fix-1006-draft.patch
+t3-docs-705-976-draft.patch

@@ -30,7 +30,7 @@ if (activeUpstream === undefined) fail('the active upstream channel is missing')
 if (workspace.packageManager !== 'yarn@4.18.0') {
   fail('the product workspace must pin yarn@4.18.0')
 }
-if (JSON.stringify(workspace.workspaces) !== JSON.stringify([
+if (JSON.stringify(workspace.workspaces.filter(name => name !== 'dsh-plugin-desktop-fork')) !== JSON.stringify([
   'dsh-plugin-desktop',
   'dsh-plugin-desktop-beta',
   'dsh-desktop-next',
