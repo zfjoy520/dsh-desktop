@@ -88,7 +88,8 @@ describe('Desktop factory reset', () => {
       await completeOrSkipDesktopSetupWizard(userDataDir, profile, 'skipped', versions)
       expect(readDesktopSetupWizardSettings(settings)).toEqual(defaults)
     }
-    expect(readDesktopMarketStateForUserData(userDataDir).requested).toBe('disabled')
+    // Fork-local default is dsh-market (upstream: disabled).
+    expect(readDesktopMarketStateForUserData(userDataDir).requested).toBe('dsh-market')
     expect([...readDesktopDisabledBundles(pluginStatePath, 'desktop')]).toEqual([])
     expect([...readDesktopDisabledBundles(pluginStatePath, 'work')]).toEqual([])
     expect([...readDesktopDisabledBundles(pluginStatePath, 'unrelated')]).toEqual(['third-party-plugin'])

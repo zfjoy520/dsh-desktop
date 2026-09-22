@@ -10,7 +10,7 @@
 import { startIsolatedDesktopHost } from './host-process.ts'
 import { app, crashReporter, safeStorage, shell } from 'electron'
 import { randomUUID } from 'node:crypto'
-import { existsSync } from 'node:fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
@@ -1181,11 +1181,42 @@ async function start(): Promise<void> {
     startupStage = 'profile-composition'
     lifecycleRecorder.transitionStartupStage(startupStage)
     const lanAddresses = desktopLanAddresses()
-    const legacyMarketSelection = readDesktopMarketStateForUserData(marketUserDataDir)
+    let legacyMarketSelection = readDesktopMarketStateForUserData(marketUserDataDir)
     let profilePreferences = readDesktopProfilePreferences(marketUserDataDir, activeProfileDir)
     let marketSelection = profilePreferences === undefined
       ? legacyMarketSelection
       : desktopProfileMarketSnapshot(profilePreferences.market)
+    // Fork-local one-time migration: a fresh Fork userData used to default to
+    // disabled, which hides the market settings with no way back, and the
+    // disabled choice was persisted on first boot. Inherit the official Stable
+    // choice once; never read-modify-write the official files. Runs at most
+    // once per Fork install (marker file); an explicit later disable is kept.
+    if (safeModePaths === undefined
+      && (legacyMarketSelection.requested === 'disabled'
+        || profilePreferences?.market === 'disabled')) {
+      const forkMarketMigratedMarker = join(marketUserDataDir, 'desktop-market', '.fork-inherited')
+      if (!existsSync(forkMarketMigratedMarker)) {
+        try {
+          const officialSelection = readDesktopMarketStateForUserData(releaseUserDataLocations.other.userDataDir)
+          if (officialSelection.requested !== 'disabled' && officialSelection.legacyDefaulted === false) {
+            await selectDesktopMarketProvider(marketUserDataDir, officialSelection.requested)
+            legacyMarketSelection = readDesktopMarketStateForUserData(marketUserDataDir)
+            if (profilePreferences !== undefined) {
+              profilePreferences = { ...profilePreferences, market: officialSelection.requested }
+            }
+            marketSelection = profilePreferences === undefined
+              ? legacyMarketSelection
+              : desktopProfileMarketSnapshot(profilePreferences.market)
+            mkdirSync(join(marketUserDataDir, 'desktop-market'), { recursive: true })
+            writeFileSync(forkMarketMigratedMarker, `${officialSelection.requested}\n`)
+            electronLogger.error(`${BIN_NAME}: inherited market provider '${officialSelection.requested}' from official DSH Desktop userData (fork had no explicit market choice)`)
+          }
+        } catch {
+          // Keep the fork state untouched; the market can still be switched
+          // from settings once its section is visible.
+        }
+      }
+    }
     const preparationHooks = {
       get aaEnabled() { return safeModePaths === undefined && profilePreferences?.aaEnabled === true },
       lanAddresses,

@@ -53,8 +53,11 @@ export interface DesktopMarketSnapshot {
 }
 
 const DEFAULT_SNAPSHOT: DesktopMarketSnapshot = Object.freeze({
-  requested: 'disabled',
-  effective: 'disabled',
+  // Fork-local default: fresh Fork userData must show the market settings.
+  // Upstream default is 'disabled', which hides the market section with no
+  // way back; Fork shares ~/.dsh where market plugins are already installed.
+  requested: 'dsh-market',
+  effective: 'dsh-market',
   legacyDefaulted: true,
 })
 

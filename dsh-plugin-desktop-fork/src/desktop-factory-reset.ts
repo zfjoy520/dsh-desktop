@@ -103,7 +103,8 @@ export async function resetDesktopDataDirectory(
     await clearDesktopProfilePluginState(join(userDataDir, 'plugin-management', 'state.json'), name)
   }
   // A fresh Profile imports this legacy machine-level selection on first boot.
-  await selectDesktopMarketProvider(userDataDir, 'disabled')
+  // Fork-local: dsh-market so the market settings stay visible (upstream: disabled).
+  await selectDesktopMarketProvider(userDataDir, 'dsh-market')
   await mkdir(target, { recursive: false, mode: DIRECTORY_MODE })
   const recreated = lstatSync(target)
   if (!recreated.isDirectory() || recreated.isSymbolicLink()) {

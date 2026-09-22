@@ -87,16 +87,17 @@ describe('Desktop Market fail-safe reads', () => {
     ['malformed JSON', (path: string) => writeFileSync(path, '{broken', 'utf8')],
     ['unknown version', (path: string) => writeFileSync(path, '{"version":2,"requested":"disabled","legacyDefaulted":false}\n', 'utf8')],
     ['invalid provider', (path: string) => writeFileSync(path, '{"version":1,"requested":"other","legacyDefaulted":false}\n', 'utf8')],
-  ])('defaults %s to disabled without writing a migration', (_label, prepare) => {
+  ])('defaults %s to dsh-market without writing a migration', (_label, prepare) => {
     const userData = temporaryUserData()
     const statePath = desktopMarketStatePath(userData)
     mkdirSync(join(userData, 'desktop-market'), { recursive: true })
     prepare(statePath)
     const before = existsSync(statePath) ? readFileSync(statePath, 'utf8') : undefined
 
+    // Fork-local default: fresh installs show the market (upstream: disabled).
     expect(readDesktopMarketStateForUserData(userData)).toEqual({
-      requested: 'disabled',
-      effective: 'disabled',
+      requested: 'dsh-market',
+      effective: 'dsh-market',
       legacyDefaulted: true,
     })
     expect(existsSync(statePath) ? readFileSync(statePath, 'utf8') : undefined).toBe(before)
@@ -116,9 +117,10 @@ describe('Desktop Market fail-safe reads', () => {
     }
 
     expect(lstatSync(statePath).isSymbolicLink()).toBe(true)
+    // Fork-local default applies here as well (upstream: disabled).
     expect(readDesktopMarketState(statePath)).toEqual({
-      requested: 'disabled',
-      effective: 'disabled',
+      requested: 'dsh-market',
+      effective: 'dsh-market',
       legacyDefaulted: true,
     })
     expect(readFileSync(target, 'utf8')).toContain('dsh-market')
